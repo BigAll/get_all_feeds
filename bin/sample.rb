@@ -4,15 +4,15 @@ require "bundler/setup"
 require "get_all_feeds"
 
 GetAllFeeds.configure do |c|
-  social_item.count = 20
-  twitter.consument_key = ''
-  twitter.consumer_secret = ''
-  twitter.access_token = ''
-  twitter.access_token_secret = ''
+  c.social_item.count = 20
+  c.twitter.consument_key = ''
+  c.twitter.consumer_secret = ''
+  c.twitter.access_token = ''
+  c.twitter.access_token_secret = ''
 
-  facebook.access_token = ''
+  c.facebook.access_token = ''
 
-  instagram.access_token = ''
+  c.instagram.access_token = ''
 end
 
 GetAllFeeds.fetch([:instagram, :twitter, :facebook])
